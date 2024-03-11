@@ -1,8 +1,11 @@
 import React from 'react'
+import FakeStore from './Pages/FakeStore'
 
 const App = () => {
   return (
-    <div>App</div>
+    <div>
+      <FakeStore />
+    </div>
   )
 }
 

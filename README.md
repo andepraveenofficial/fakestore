@@ -12,6 +12,9 @@
 ### APIs
 products : https://fakestoreapi.com
 
+### Features
+- Create products grid.
+- Clicking on any product should show the complete product details.
 
 ### Hosting
-Netlify : 
+Netlify : https://fakestorepraveen.netlify.app/
