@@ -10,6 +10,7 @@ const FakeStore = () => {
     const url = PRODUCTS_LIST_API;
     const productsList = useGetData(url);
 
+
     return (
         <div>
             <section>
@@ -23,11 +24,12 @@ const FakeStore = () => {
                                 You can Select any Product and see Details
                             </p>
                         </div>
-                        <ul className="grid justify-center grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3">
-                            {productsList && productsList.map((eachProduct) => (
+                        {productsList ? <ul className="grid justify-center grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3">
+                            {productsList.map((eachProduct) => (
                                 <Product key={eachProduct.id} productDetails={eachProduct} />
                             ))}
-                        </ul>
+                        </ul> : <p className='h-screen text-center m-52'>Loading....</p>}
+
                     </div>
                 </div>
             </section>
