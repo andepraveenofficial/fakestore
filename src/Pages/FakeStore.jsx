@@ -1,10 +1,15 @@
-import React from 'react'
 import Product from '../Components/Product'
 
-import { productsListHardData } from '../Utils/productsListHardData'
+// import { productsListHardData } from '../Utils/productsListHardData'
+
+import useGetData from '../Hooks/useGetData'
+import { PRODUCTS_LIST_API } from '../Services/fakeStoreAPIs';
 
 const FakeStore = () => {
-    console.log(productsListHardData)
+    // console.log(productsListHardData)
+    const url = PRODUCTS_LIST_API;
+    const productsList = useGetData(url);
+
     return (
         <div>
             <section>
@@ -19,7 +24,7 @@ const FakeStore = () => {
                             </p>
                         </div>
                         <ul className="grid justify-center grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3">
-                            {productsListHardData.map((eachProduct) => (
+                            {productsList && productsList.map((eachProduct) => (
                                 <Product key={eachProduct.id} productDetails={eachProduct} />
                             ))}
                         </ul>
