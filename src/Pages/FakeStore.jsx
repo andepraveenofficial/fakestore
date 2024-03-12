@@ -10,7 +10,6 @@ const FakeStore = () => {
     const url = PRODUCTS_LIST_API;
     const productsList = useGetData(url);
 
-
     return (
         <div>
             <section>
@@ -28,7 +27,7 @@ const FakeStore = () => {
                             {productsList.map((eachProduct) => (
                                 <Product key={eachProduct.id} productDetails={eachProduct} />
                             ))}
-                        </ul> : <p className='h-screen text-center m-52'>Loading....</p>}
+                        </ul> : <div className='flex flex-col items-center justify-center h-screen'><p>Loading....</p></div>}
 
                     </div>
                 </div>
