@@ -1,12 +1,10 @@
 import Product from '../Components/Product'
+import useGetData from '../Hooks/useGetData'
 
 // import { productsListHardData } from '../Utils/productsListHardData'
-
-import useGetData from '../Hooks/useGetData'
 import { PRODUCTS_LIST_API } from '../Services/fakeStoreAPIs';
 
 const FakeStore = () => {
-    // console.log(productsListHardData)
     const url = PRODUCTS_LIST_API;
     const productsList = useGetData(url);
 
@@ -27,7 +25,7 @@ const FakeStore = () => {
                             {productsList.map((eachProduct) => (
                                 <Product key={eachProduct.id} productDetails={eachProduct} />
                             ))}
-                        </ul> : <div className='flex flex-col items-center justify-center h-screen'><p>Loading....</p></div>}
+                        </ul> : <div className='flex flex-col items-center justify-center h-svh'><p>Loading....</p></div>}
 
                     </div>
                 </div>

@@ -6,16 +6,12 @@ import { Link } from "react-router-dom";
 // import { productItemHardData } from "../Utils/productItemHardData";
 
 const Product = ({ productDetails }) => {
-
     const { title, price, description, category, image, rating } = productDetails;
-
-
     const [showMoreInfo, setShowMoreInfo] = useState(false);
 
     const toggleMoreInfo = () => {
         setShowMoreInfo(!showMoreInfo);
     };
-
 
     return (
         <li className='m-2'>

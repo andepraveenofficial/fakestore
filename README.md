@@ -18,3 +18,7 @@ products : https://fakestoreapi.com
 
 ### Hosting
 Netlify : https://fakestorepraveen.netlify.app/
+
+### Start The Applicateion
+`npm install`
+`npm run dev`

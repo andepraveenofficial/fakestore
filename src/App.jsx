@@ -1,4 +1,3 @@
-
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import FakeStore from './Pages/FakeStore'
 import ProductPage from './Pages/ProductPage'
@@ -12,7 +11,6 @@ const App = () => {
           <Route path="/product/:productId" element={<ProductPage />} />
         </Routes>
       </BrowserRouter>
-
     </div>
   )
 }

@@ -239,6 +239,6 @@ export const productsListHardData = [
             "count": 145
         }
     }
-]
+];
 
 

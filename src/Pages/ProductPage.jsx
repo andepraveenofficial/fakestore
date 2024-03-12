@@ -8,8 +8,8 @@ const ProductPage = () => {
     const navigate = useNavigate()
     // const product = productItemHardData;
     const url = `${PRODUCTS_LIST_API}/${productId}`;
-    const product = useGetData(url)
-    console.log(product)
+    const product = useGetData(url);
+    console.log(product);
     if (!product) return <div className='flex flex-col items-center justify-center h-screen'><p>Loading....</p></div>
 
     const { title, price, description, image, rating } = product;

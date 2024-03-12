@@ -9,4 +9,4 @@ export const productItemHardData = {
         "rate": 3.9,
         "count": 120
     }
-}
+};
